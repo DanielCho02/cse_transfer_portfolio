@@ -27,7 +27,7 @@ class TaskManager:
         - priority (int): The task priority (1, 2, or 3).
 
         Returns:
-        - dict: The task record if created successfully.
+        - list: The task record if created successfully.
         - int: -1 if the input data types are invalid.
         - int: -2 if the input values are not in the correct format.
         """
@@ -53,7 +53,7 @@ class TaskManager:
         - task_id (str): The identifier of the task to retrieve.
 
         Returns:
-        - dict: The task record if found.
+        - list: The task record if found.
         - int: -1 if the task is not found.
         """
         for task in self.__tasks:
@@ -87,7 +87,7 @@ class TaskManager:
         - delay (int): The number of days to extend the deadline (1-14 days).
 
         Returns:
-        - dict: The updated task record if successful.
+        - list: The updated task record if successful.
         - int: -1 if the task is not found.
         - int: -2 if the delay exceeds 14 days.
         """
@@ -116,7 +116,7 @@ class TaskManager:
         Retrieves the task with the earliest deadline.
 
         Returns:
-        - dict: The task with the earliest deadline.
+        - list: The task with the earliest deadline.
         - int: -1 if there are no tasks.
         """
         if not self.__tasks:
@@ -214,7 +214,7 @@ class TaskManager:
         - task_id (str): The identifier of the task to delete.
 
         Returns:
-        - dict: The deleted task record if successful.
+        - list: The deleted task record if successful.
         - int: -1 if the task is not found.
         """
         for task in self.__tasks:
@@ -232,7 +232,7 @@ class TaskManager:
         - new_priority (int): The new priority value (1, 2, or 3).
 
         Returns:
-        - dict: The updated task record if successful.
+        - list: The updated task record if successful.
         - int: -1 if the task is not found.
         - int: -2 if the new priority is invalid.
         """
